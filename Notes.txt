@@ -1,0 +1,366 @@
+pi@raspberrypi:~ $ sudo apt-get update
+Hit:1 http://raspbian.raspberrypi.org/raspbian buster InRelease
+Hit:2 http://archive.raspberrypi.org/debian buster InRelease
+Reading package lists... Done
+pi@raspberrypi:~ $ sudo apt install postgresql libpq-dev postgresql-client postgresql-client-common -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  python-colorzero
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  libllvm7 libpq5 postgresql-11 postgresql-client-11 postgresql-common sysstat
+Suggested packages:
+  postgresql-doc-11 postgresql-doc libjson-perl isag
+The following NEW packages will be installed:
+  libllvm7 libpq-dev libpq5 postgresql postgresql-11 postgresql-client
+  postgresql-client-11 postgresql-client-common postgresql-common sysstat
+0 upgraded, 10 newly installed, 0 to remove and 0 not upgraded.
+Need to get 27.3 MB of archives.
+After this operation, 106 MB of additional disk space will be used.
+Get:1 http://mirror.serverius.net/raspbian/raspbian buster/main armhf libllvm7 armhf 1:7.0.1-8+rpi3+deb10u2 [11.4 MB]
+Get:8 http://mirror.transip.net/raspbian/raspbian buster/main armhf postgresql all 11+200+deb10u4 [61.1 kB]
+Get:9 http://mirror.nl.leaseweb.net/raspbian/raspbian buster/main armhf postgresql-client all 11+200+deb10u4 [61.1 kB]
+Get:2 http://mirror.serverius.net/raspbian/raspbian buster/main armhf libpq5 armhf 11.13-0+deb10u1 [155 kB]
+Get:3 http://mirror.serverius.net/raspbian/raspbian buster/main armhf libpq-dev armhf 11.13-0+deb10u1 [153 kB]
+Get:4 http://mirror.serverius.net/raspbian/raspbian buster/main armhf postgresql-client-common all 200+deb10u4 [85.1 kB]
+Get:5 http://mirror.serverius.net/raspbian/raspbian buster/main armhf postgresql-client-11 armhf 11.13-0+deb10u1 [1,304 kB]
+Get:6 http://mirror.serverius.net/raspbian/raspbian buster/main armhf postgresql-common all 200+deb10u4 [225 kB]
+Get:7 http://mirror.serverius.net/raspbian/raspbian buster/main armhf postgresql-11 armhf 11.13-0+deb10u1 [13.3 MB]
+Get:10 http://mirror.serverius.net/raspbian/raspbian buster/main armhf sysstat armhf 12.0.3-2 [513 kB]
+Fetched 27.3 MB in 5s (5,362 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libllvm7:armhf.
+(Reading database ... 98876 files and directories currently installed.)
+Preparing to unpack .../0-libllvm7_1%3a7.0.1-8+rpi3+deb10u2_armhf.deb ...
+Unpacking libllvm7:armhf (1:7.0.1-8+rpi3+deb10u2) ...
+Selecting previously unselected package libpq5:armhf.
+Preparing to unpack .../1-libpq5_11.13-0+deb10u1_armhf.deb ...
+Unpacking libpq5:armhf (11.13-0+deb10u1) ...
+Selecting previously unselected package libpq-dev.
+Preparing to unpack .../2-libpq-dev_11.13-0+deb10u1_armhf.deb ...
+Unpacking libpq-dev (11.13-0+deb10u1) ...
+Selecting previously unselected package postgresql-client-common.
+Preparing to unpack .../3-postgresql-client-common_200+deb10u4_all.deb ...
+Unpacking postgresql-client-common (200+deb10u4) ...
+Selecting previously unselected package postgresql-client-11.
+Preparing to unpack .../4-postgresql-client-11_11.13-0+deb10u1_armhf.deb ...
+Unpacking postgresql-client-11 (11.13-0+deb10u1) ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../5-postgresql-common_200+deb10u4_all.deb ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+Unpacking postgresql-common (200+deb10u4) ...
+Selecting previously unselected package postgresql-11.
+Preparing to unpack .../6-postgresql-11_11.13-0+deb10u1_armhf.deb ...
+Unpacking postgresql-11 (11.13-0+deb10u1) ...
+Selecting previously unselected package postgresql.
+Preparing to unpack .../7-postgresql_11+200+deb10u4_all.deb ...
+Unpacking postgresql (11+200+deb10u4) ...
+Selecting previously unselected package postgresql-client.
+Preparing to unpack .../8-postgresql-client_11+200+deb10u4_all.deb ...
+Unpacking postgresql-client (11+200+deb10u4) ...
+Selecting previously unselected package sysstat.
+Preparing to unpack .../9-sysstat_12.0.3-2_armhf.deb ...
+Unpacking sysstat (12.0.3-2) ...
+Setting up postgresql-client-common (200+deb10u4) ...
+Setting up libpq5:armhf (11.13-0+deb10u1) ...
+Setting up libpq-dev (11.13-0+deb10u1) ...
+Setting up postgresql-client-11 (11.13-0+deb10u1) ...
+update-alternatives: using /usr/share/postgresql/11/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+Setting up postgresql-common (200+deb10u4) ...
+supported-versions: WARNING! Unknown distribution: raspbian
+debian found in ID_LIKE, treating as Debian
+Adding user postgres to group ssl-cert
+
+Creating config file /etc/postgresql-common/createcluster.conf with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+  en_gb
+Removing obsolete dictionary files:
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service → /lib/systemd/system/postgresql.service.
+Setting up libllvm7:armhf (1:7.0.1-8+rpi3+deb10u2) ...
+Setting up sysstat (12.0.3-2) ...
+
+Creating config file /etc/default/sysstat with new version
+update-alternatives: using /usr/bin/sar.sysstat to provide /usr/bin/sar (sar) in auto mode
+Created symlink /etc/systemd/system/multi-user.target.wants/sysstat.service → /lib/systemd/system/sysstat.service.
+Setting up postgresql-client (11+200+deb10u4) ...
+Setting up postgresql-11 (11.13-0+deb10u1) ...
+Creating new PostgreSQL cluster 11/main ...
+/usr/lib/postgresql/11/bin/initdb -D /var/lib/postgresql/11/main --auth-local peer --auth-host md5
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/11/main ... ok
+creating subdirectories ... ok
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default timezone ... Europe/Amsterdam
+selecting dynamic shared memory implementation ... posix
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctlcluster 11 main start
+
+Ver Cluster Port Status Owner    Data directory              Log file
+11  main    5432 down   postgres /var/lib/postgresql/11/main /var/log/postgresql/postgresql-11-main.log
+update-alternatives: using /usr/share/postgresql/11/man/man1/postmaster.1.gz to provide /usr/share/man/man1/postmaster.1.gz (postmaster.1.gz) in auto mode
+Setting up postgresql (11+200+deb10u4) ...
+Processing triggers for systemd (241-7~deb10u8+rpi1) ...
+Processing triggers for man-db (2.8.5-2) ...
+Processing triggers for libc-bin (2.28-10+rpt2+rpi1) ...
+pi@raspberrypi:~ $ sudo su postgres
+postgres@raspberrypi:/home/pi$ createuser pi -P --interactive
+Enter password for new role: 
+Enter it again: 
+Shall the new role be a superuser? (y/n) n
+Shall the new role be allowed to create databases? (y/n) y
+Shall the new role be allowed to create more new roles? (y/n) y
+postgres@raspberrypi:/home/pi$ psql
+psql (11.13 (Raspbian 11.13-0+deb10u1))
+Type "help" for help.
+
+postgres=# create database test;
+CREATE DATABASE
+postgres=# \q
+postgres@raspberrypi:/home/pi$ exit
+exit
+pi@raspberrypi:~ $ psql test
+psql (11.13 (Raspbian 11.13-0+deb10u1))
+Type "help" for help.
+
+test=> pwd
+test-> ;
+ERROR:  syntax error at or near "pwd"
+LINE 1: pwd
+        ^
+test=> \q
+pi@raspberrypi:~ $ mkdir RSL
+pi@raspberrypi:~ $ cd RSL
+pi@raspberrypi:~/RSL $ psql test
+psql (11.13 (Raspbian 11.13-0+deb10u1))
+Type "help" for help.
+
+test=> CREATE TABLE movies (url text, title text, ReleaseDate text, Distributor text, Starring text, Summary text, Director text, Genre text, Rating text, Runtime text, Userscore text, Metascore text, scoreCounts text);
+CREATE TABLE
+test=> \copy movies FROM '/home/pi/RSL/moviesFromMetacritic.csv/' delimiter ';' csv header;
+COPY 5229
+test=> SELECT * FROM movies where url='pirates-of-the-caribbean-the-curse-of-the-black-pearl';
+
+[1]+  Stopped                 psql test
+pi@raspberrypi:~/RSL $ psql
+psql: FATAL:  database "pi" does not exist
+pi@raspberrypi:~/RSL $ psql test
+psql (11.13 (Raspbian 11.13-0+deb10u1))
+Type "help" for help.
+
+test=> ALTER TABLE movies ADD lexemesSummary tsvector;
+ALTER TABLE
+test=> UPDATE movies SET lexemesSummary = to_tsvector(Summary);
+UPDATE 5229
+test=> SELECT url FROM movies WHERE lexemesSummary @@ to_tsquery('pirate')
+test-> ;
+                          url                          
+-------------------------------------------------------
+ bukowski-born-into-this
+ captain-phillips
+ lucky-number-slevin
+ pan
+ the-pirates!-band-of-misfits
+ pirates-of-the-caribbean-the-curse-of-the-black-pearl
+ pirates-of-the-caribbean-at-worlds-end
+ the-pirates-who-dont-do-anything-a-veggietales-movie
+ pirates-of-the-caribbean-dead-men-tell-no-tales
+ the-princess-bride
+ stardust
+(11 rows)
+
+test=> ALTER TABLE movies ADD rank float4;
+ALTER TABLE
+test=> UPDATE movies SET rank = ts_rank(lexemesSummary, plainto_tsquery((SELECT Summary FROM movies WHERE url='pirates-of-the-caribbean-the-curse-of-the-black-pearl')));
+UPDATE 5229
+test=> CREATE TABLE recommendationsBasedOnSummaryField AS SELECT url, rank FROM movies WHERE rank < 0.99 ORDER BY rank DESC LIMIT 50;
+SELECT 50
+test=> \copy (SELECT * FROM recommendationsBasedOnSummaryField) to '/home/pi/RSL/top50recommendations.csv' WITH csv;
+COPY 50
+test=> 
+
+------------------------------
+test=> ALTER TABLE movies ADD lexemesTitle tsvector;
+ALTER TABLE
+test=> UPDATE movies SET lexemesTitle = to_tsvector(Summary);
+UPDATE 5229
+test=> ALTER TABLE movies ADD rank1 float4;
+ALTER TABLE
+test=> UPDATE movies SET rank1 = ts_rank(lexemesTitle,plainto_tsquery((SELECT Title FROM movies WHERE url='stardust')));
+UPDATE 5229
+test=> CREATE TABLE recommendationsBasedOnTitleField AS SELECT url, rank1 FROM movies WHERE rank1 < 0.99 ORDER BY rank DESC LIMIT 50;
+SELECT 50
+test=> \copy (SELECT * FROM recommendationsBasedOnTitleField) to '/home/pi/RSL/top50recommendations1.csv' WITH csv;
+COPY 50
+test=> 
+------------------------------
+test=> ALTER TABLE movies ADD lexemesStarring tsvector;
+ALTER TABLE
+test=> UPDATE movies SET lexemesStarring = to_tsvector(Starring);
+UPDATE 5229
+test=> SELECT url FROM movies WHERE lexemesStarring @@ to_tsquery('depp');
+
+ charlie-and-the-chocolate-factory
+ alice-through-the-looking-glass
+ alice-in-wonderland
+ the-astronauts-wife
+ benny-joon
+ blow
+ corpse-bride
+ dark-shadows
+ dead-man
+ black-mass
+ don-juan-demarco
+ donnie-brasco
+ edward-scissorhands
+ ed-wood
+ fear-and-loathing-in-las-vegas
+ for-no-good-reason
+ from-hell
+ into-the-woods
+ public-enemies
+ lone-ranger
+ the-ninth-gate
+ once-upon-a-time-in-mexico
+ pirates-of-the-caribbean-the-curse-of-the-black-pearl
+ pirates-of-the-caribbean-dead-mans-chest
+ pirates-of-the-caribbean-at-worlds-end
+ pirates-of-the-caribbean-dead-men-tell-no-tales
+ rango
+ the-source
+ sleepy-hollow
+ sweeney-todd-the-demon-barber-of-fleet-street
+ transcendence
+(31 rows)
+
+test=> SELECT url FROM movies WHERE lexemesStarring @@ to_tsquery('depp');
+test=> ALTER TABLE movies ADD rank2 float4;
+ALTER TABLE
+test=> UPDATE movies SET rank2 = ts_rank(lexemesStarring,plainto_tsquery((SELECT Title FROM movies WHERE url='stardust')));
+UPDATE 5229
+test=> CREATE TABLE recommendationsBasedOnStarringField AS SELECT url, rank2 FROM movies WHERE rank2 < 0.99 ORDER BY rank DESC LIMIT 50;
+SELECT 50
+test=> \copy (SELECT * FROM recommendationsBasedOnStarringField) to '/home/pi/RSL/top50recommendations1.csv' WITH csv;
+COPY 50
+
+
+------------------------------
+pi@raspberrypi:~ $ cd RSL
+pi@raspberrypi:~/RSL $ python3 -m venv ~/VE
+pi@raspberrypi:~/RSL $ source ~/VE/bin/activate
+(VE) pi@raspberrypi:~/RSL $ python--version
+bash: python--version: command not found
+(VE) pi@raspberrypi:~/RSL $ python --version
+Python 3.7.3
+(VE) pi@raspberrypi:~/RSL $ pip list
+Package       Version
+------------- -------
+pip           18.1   
+pkg-resources 0.0.0  
+setuptools    40.8.0 
+(VE) pi@raspberrypi:~/RSL $ pip show pip
+Name: pip
+Version: 18.1
+Summary: The PyPA recommended tool for installing Python packages.
+Home-page: https://pip.pypa.io/
+Author: The pip developers
+Author-email: pypa-dev@groups.google.com
+License: MIT
+Location: /home/pi/VE/lib/python3.7/site-packages
+Requires: 
+Required-by: 
+(VE) pi@raspberrypi:~/RSL $ pip intall pandas
+ERROR: unknown command "intall" - maybe you meant "install"
+(VE) pi@raspberrypi:~/RSL $ pip install pandas
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting pandas
+  Downloading https://www.piwheels.org/simple/pandas/pandas-1.3.4-cp37-cp37m-linux_armv7l.whl (33.6MB)
+    100% |████████████████████████████████| 33.6MB 13kB/s 
+Collecting numpy>=1.17.3; platform_machine != "aarch64" and platform_machine != "arm64" and python_version < "3.10" (from pandas)
+  Downloading https://www.piwheels.org/simple/numpy/numpy-1.21.3-cp37-cp37m-linux_armv7l.whl (12.3MB)
+    100% |████████████████████████████████| 12.3MB 36kB/s 
+Collecting pytz>=2017.3 (from pandas)
+  Downloading https://files.pythonhosted.org/packages/d3/e3/d9f046b5d1c94a3aeab15f1f867aa414f8ee9d196fae6865f1d6a0ee1a0b/pytz-2021.3-py2.py3-none-any.whl (503kB)
+    100% |████████████████████████████████| 512kB 902kB/s 
+Collecting python-dateutil>=2.7.3 (from pandas)
+  Downloading https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl (247kB)
+    100% |████████████████████████████████| 256kB 1.6MB/s 
+Collecting six>=1.5 (from python-dateutil>=2.7.3->pandas)
+  Downloading https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl
+Installing collected packages: numpy, pytz, six, python-dateutil, pandas
+Successfully installed numpy-1.21.3 pandas-1.3.4 python-dateutil-2.8.2 pytz-2021.3 six-1.16.0
+(VE) pi@raspberrypi:~/RSL $ pip uninstall numpy
+sudoUninstalling numpy-1.21.3:
+  Would remove:
+    /home/pi/VE/bin/f2py
+    /home/pi/VE/bin/f2py3
+    /home/pi/VE/bin/f2py3.7
+    /home/pi/VE/lib/python3.7/site-packages/numpy-1.21.3.dist-info/*
+    /home/pi/VE/lib/python3.7/site-packages/numpy/*
+Proceed (y/n)? y
+Your response ('sudoy') was not one of the expected responses: y, n
+Proceed (y/n)? y
+  Successfully uninstalled numpy-1.21.3
+(VE) pi@raspberrypi:~/RSL $ sudo apt-get install libatlas-base-dev
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  python-colorzero
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  libatlas3-base
+Suggested packages:
+  libatlas-doc liblapack-doc
+The following NEW packages will be installed:
+  libatlas-base-dev libatlas3-base
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 5,365 kB of archives.
+After this operation, 32.1 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://mirror.serverius.net/raspbian/raspbian buster/main armhf libatlas3-base armhf 3.10.3-8+rpi1 [2,399 kB]
+Get:2 http://mirror.nl.leaseweb.net/raspbian/raspbian buster/main armhf libatlas-base-dev armhf 3.10.3-8+rpi1 [2,966 kB]
+Fetched 5,365 kB in 1s (4,052 kB/s)                                                 
+Selecting previously unselected package libatlas3-base:armhf.
+(Reading database ... 100988 files and directories currently installed.)
+Preparing to unpack .../libatlas3-base_3.10.3-8+rpi1_armhf.deb ...
+Unpacking libatlas3-base:armhf (3.10.3-8+rpi1) ...
+Selecting previously unselected package libatlas-base-dev:armhf.
+Preparing to unpack .../libatlas-base-dev_3.10.3-8+rpi1_armhf.deb ...
+Unpacking libatlas-base-dev:armhf (3.10.3-8+rpi1) ...
+Setting up libatlas3-base:armhf (3.10.3-8+rpi1) ...
+update-alternatives: using /usr/lib/arm-linux-gnueabihf/atlas/libblas.so.3 to provide /usr/lib/arm-linux-gnueabihf/libblas.so.3 (libblas.so.3-arm-linux-gnueabihf) in auto mode
+update-alternatives: using /usr/lib/arm-linux-gnueabihf/atlas/liblapack.so.3 to provide /usr/lib/arm-linux-gnueabihf/liblapack.so.3 (liblapack.so.3-arm-linux-gnueabihf) in auto mode
+Setting up libatlas-base-dev:armhf (3.10.3-8+rpi1) ...
+update-alternatives: using /usr/lib/arm-linux-gnueabihf/atlas/libblas.so to provide /usr/lib/arm-linux-gnueabihf/libblas.so (libblas.so-arm-linux-gnueabihf) in auto mode
+update-alternatives: using /usr/lib/arm-linux-gnueabihf/atlas/liblapack.so to provide /usr/lib/arm-linux-gnueabihf/liblapack.so (liblapack.so-arm-linux-gnueabihf) in auto mode
+Processing triggers for libc-bin (2.28-10+rpt2+rpi1) ...
+(VE) pi@raspberrypi:~/RSL $ pip3 install numpy
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Collecting numpy
+  Using cached https://www.piwheels.org/simple/numpy/numpy-1.21.3-cp37-cp37m-linux_armv7l.whl
+Installing collected packages: numpy
+Successfully installed numpy-1.
+
+
+
+------------------------------
+
+
+
